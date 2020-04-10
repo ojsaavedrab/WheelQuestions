@@ -11,8 +11,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
-    font-family: 'Bowlby One SC', cursive;
-    font-size: 2vw;
 }
 
 .marker>img {
@@ -31,6 +29,16 @@
     width: 50%;
     text-align: center;
 }
+
+svg > text {
+  font-family: 'Bowlby One SC', cursive;
+  font-size: 3.3vw;
+}
+
+svg {
+  width: 100%;
+}
+
 
 .wheel-container {
     display: block;
