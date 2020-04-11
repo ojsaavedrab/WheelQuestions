@@ -1,49 +1,85 @@
+/************************************************************************** 
+// CS: Wheel 
+// Permite crear un objeto de rueda de la fortuna de acuerdo al selector
+ ************************************************************************/
 
-function Wheel(sectors,speed){
-	var position = 0;
-	var sectorDegree = 360/sectors
-	
+function Wheel(_selector,_sectors,_speed){
+	/** PRIVATE PROPERTIES **/
+	var wheel = this;
+	var selector = _selector;
+	var sectors = _sectors;
+	var speed = _speed;
+	var sectorDegree = 360/sectors;
+	var minTurns = 10,  maxTurns=30;
+	var degrees, addSectors, score;
+	var whellApp = $(selector);
+	var whellImg = whellApp.find(".wheel>img");
+	var whellScore = whellApp.find("label>svg>text");
+	var whellSpin = whellApp.find(".button.spin");
+	var whellRestart = whellApp.find(".button.restart");
 
-	var alive=true, age=1;
-	var maxAge=70+Math.round(Math.random()*15)+Math.round(Math.random()*15);
-	function makeOlder(){ return alive = (++age <= maxAge) } 
-
-	var myName=n?n:"John Doe";
-	var weight=1;
-
-
-	// ************************************************************************ 	
-	// PRIVILEGED METHODS 
-	// MAY BE INVOKED PUBLICLY AND MAY ACCESS PRIVATE ITEMS 
-	// MAY NOT BE CHANGED; MAY BE REPLACED WITH PUBLIC FLAVORS 
-	// ************************************************************************ 
-	this.toString=this.getName=function(){ return myName } 
-
-	this.eat=function(){ 
-		if (makeOlder()){ 
-			this.dirtFactor++;
-			return weight*=3;
-		} else alert(myName+" can't eat, he's dead!");
-	} 
-	this.exercise=function(){ 
-		if (makeOlder()){ 
-			this.dirtFactor++;
-			return weight/=2;
-		} else alert(myName+" can't exercise, he's dead!");
-	} 
-	this.weigh=function(){ return weight } 
-	this.getRace=function(){ return race } 
-	this.getAge=function(){ return age } 
-	this.muchTimePasses=function(){ age+=50; this.dirtFactor=10; } 
-
-
-	// ************************************************************************ 
-	// PUBLIC PROPERTIES -- ANYONE MAY READ/WRITE 
-	// ************************************************************************ 
-	this.clothing="nothing/naked";
-	this.dirtFactor=0;
+	/** PUBLIC PROPERTIES **/
+	this.position = 0;
 	
 	/** PRIVATE FUNCTIONS **/
-	
+	function init(){
+		wheel.position=0;
+		degrees = 0;
+		addSectors = 0;
+		score=0		
+		whellImg.css("transform", `rotate(${degrees}deg)`);
+		updateScore();
+	}
+
+	function setDegrees(){
+		degrees = 360 * minTurns + Math.random() * 360 * maxTurns;
+		addSectors = Math.round(degrees/sectorDegree);
+		degrees = Math.round(addSectors*sectorDegree);		 
+	}
+
+	function endRotate(){
+		wheel.position = addSectors % sectors;
+		degrees = Math.round((wheel.position) * sectorDegree);
+		whellImg.css("transition", 'none');
+		whellImg.css("transform", `rotate(${degrees}deg)`);
+		wheel.endRotate(wheel.position);
+	}
+
+	function updateScore(){
+		whellScore.html(score);
+	}
+
+	/** PRIVILEGED METHODS **/
+	this.rotate = function () {
+		setDegrees();
+		// Start rotate image
+		whellImg.css("transition", 'all 10s ease-out');
+		whellImg.css("transform", `rotate(${degrees}deg)`);
+	}
+
+	this.addScore = function(_score){
+		score+=_score;
+		updateScore();
+	}
+
+	/** EVENTS METHODS **/
+	whellImg.on('transitionend', endRotate);
+	whellSpin.on('click', this.rotate)
+	whellRestart.on('click', init)
+
+	init();
 } 
 
+Wheel.prototype = {
+    constructor: Wheel,
+
+    //Plublic: Funcion que se ejecuta cuando la obtencion es satisfactoria
+    endRotate: function(position) {
+        console.info(`la posición final es ${position}`);
+    },
+
+    //Plublic: Funcion que se ejecuta cuando la obtencion fallo
+    fail: function() {
+        console.error("Fallo la creación" + this.error.args.get_message())
+    }
+}
