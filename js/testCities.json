@@ -1,0 +1,77 @@
+{
+    "title": "Capitales del mundo",
+    "questions": [
+      {
+        "id": 0,
+        "question": "¿Cuál es la capital de Italia?",
+        "options": [
+          {
+            "id": "A",
+            "option": "Roma"
+          },
+          {
+            "id": "B",
+            "option": "Milán"
+          },
+          {
+            "id": "C",
+            "option": "Florencia"
+          },
+          {
+            "id": "D",
+            "option": "Nápoles"
+          }
+        ],
+        "value": 100,
+        "idAnswer": "A"
+      },
+      {
+        "id": 1,
+        "question": "¿Cuál es la capital de Australia?",
+        "options": [
+          {
+            "id": "A",
+            "option": "Sidney"
+          },
+          {
+            "id": "B",
+            "option": "Melbourne"
+          },
+          {
+            "id": "C",
+            "option": "Camberra"
+          },
+          {
+            "id": "D",
+            "option": "Adelaide"
+          }
+        ],
+        "value": 500,
+        "idAnswer": "C"
+      },
+      {
+        "id": 2,
+        "question": "¿Cuál es la capital de Bolivia?",
+        "options": [
+          {
+            "id": "A",
+            "option": "Tarija"
+          },
+          {
+            "id": "B",
+            "option": "Oruro"
+          },
+          {
+            "id": "C",
+            "option": "Potosí"
+          },
+          {
+            "id": "D",
+            "option": "Sucre"
+          }
+        ],
+        "value": 200,
+        "idAnswer": "D"
+      }
+    ]
+  }

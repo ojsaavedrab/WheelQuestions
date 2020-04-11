@@ -46,7 +46,8 @@ function Wheel(_selector,_sectors,_speed){
 	}
 
 	function updateScore(){
-		whellScore.html(score);
+		
+		whellScore.html(score.toString().padStart(4, '0'));
 	}
 
 	/** PRIVILEGED METHODS **/

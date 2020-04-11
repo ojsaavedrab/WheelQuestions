@@ -10,4 +10,13 @@ $(function() {
       this.addScore(position*100);
     }
   }
+
+  //creamos el formulario
+  test={
+    "title": "Prueba de formulario",
+    "option": "Nápoles"
+  };
+  dialog = new Form('#Test1');
+  dialog.render({item:{test}, selector:".test"});
+
 });

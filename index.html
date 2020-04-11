@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Wheel of Questions</title>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" type="text/css" href="css/styles.css" />
-		<script src="js/jquery-3.4.1.js"></script>
-		<script src="js/script.js"></script>
-		<script src="js/Wheel.js"></script>
-	</head>
 
-	<body>
-		<div id="Wheel1" class="wheel-app">
-			<div class="score">
-				<img src="img/score.png" />
-				<label>
-					<svg viewBox="0 0 200 100">
-						<text x="0" y="70">1500</text>
-					</svg>
-				</label>
-			</div>    
-			<div class="wheel-container">
-				<div class="wheel">
-					<img src="img/wheel.svg" />
-				</div>
-				<div class="marker">
-					<img src="img/marker.svg" />
-				</div>
-				<div class="clear"></div>
+<head>
+	<title>Wheel of Questions</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/Wheel.js"></script>
+	<script src="js/Form.js"></script>
+	<script src="js/Test.js"></script>
+</head>
+
+<body>
+	<div id="Wheel1" class="wheel-app">
+		<div class="score">
+			<img src="img/score.png" />
+			<label>
+				<svg viewBox="0 0 200 100">
+					<text x="0" y="70">1500</text>
+				</svg>
+			</label>
+		</div>
+		<div class="wheel-container">
+			<div class="wheel">
+				<img src="img/wheel.svg" />
 			</div>
-			<div class="buttons">
-				<div class="button spin"><img src="img/spin.png" />
-				</div>
-				<div class="button restart"><img src="img/restart.png" />
-				</div>
+			<div class="marker">
+				<img src="img/marker.svg" />
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="buttons">
+			<div class="button spin"><img src="img/spin.png" />
+			</div>
+			<div class="button restart"><img src="img/restart.png" />
 			</div>
 		</div>
-	</body>
+	</div>
+	<dialog id="Test1" class="test-app" data-file="js/testCities.json">
+		<div class="test title">
+			<span data-text="test.title"></span>
+		</div>
+		<div class="question">
+			<span data-text="question.question"></span>
+		</div>
+		<div class="options">
+			<div class="template option hidden" id="option.id">
+				<div class="id" data-text="option.id"></div>
+				<div class="option" data-text="option.option"></div>
+			</div>
+		</div>
+		</div>
+	</dialog>
+</body>
+
 </html>
