@@ -6,6 +6,7 @@
   padding: 0;
   background: url(../img/test-fondo.svg) no-repeat #FFF;
   background-size: 100%;
+  min-width: 400px;
 }
 
 .test-app .title {
@@ -87,5 +88,8 @@
 }
 .test-app div.option.item:nth-child(5) {
   background-color: #fde6bd;
+}
+
+.test-app div.option.item:last-child {
   margin-bottom:8%;
 }
