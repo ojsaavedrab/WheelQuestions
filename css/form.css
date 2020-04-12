@@ -1,0 +1,91 @@
+.test-app {
+  font-family: comic sans ms,comic-sans-w01-regular,comic-sans-w02-regular,comic-sans-w10-regular,cursive;
+  font-size: 1em;
+  border: transparent 0 solid;
+  margin: auto;
+  padding: 0;
+  background: url(../img/test-fondo.svg) no-repeat #FFF;
+  background-size: 100%;
+}
+
+.test-app .title {
+  margin: 0;
+  text-align: center;
+  padding: 3% 0;
+  color: #FFF;
+}
+
+.test-app .title>span {
+  font-size: 0.8em;
+}
+
+.test-app .title {
+}
+.title>span {
+  font-size: 2em;
+}
+
+.test-app .option.item {
+  float: left;
+  width: 80%;
+  margin: 2% 10%;
+  cursor: pointer;
+  padding: 2%;
+  vertical-align: middle;
+  display: table-column;
+  border-radius: 1.5em;
+}
+
+.test-app .option.item>.id {
+  float: left;
+  margin-right: 4%;
+  background-color: #07b7cf;
+  border-radius: 100%;
+  width: 7%;
+  text-align: center;
+  padding: 2%;
+  color: #FFF;
+  display: table-cell;
+}
+
+.test-app .option.item .option {
+  margin: auto;
+  height: 100%;
+  display: table-cell;
+}
+
+.test-app .options {
+  /* text-align: center; */
+  width: 100%;
+  display: table;
+}
+
+.test-app .question {
+  text-align: center;
+  margin: 7% 7% 21%;
+}
+
+.test-app .question > span {
+  font-size: 1.8em;
+  color: #FFF;
+}
+
+.test-app .question .puntaje {
+  color: #CA3F45;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.test-app div.option.item:nth-child(2) {
+  background-color: #A8E7F0;
+}
+.test-app div.option.item:nth-child(3) {
+  background-color: #FFe982;
+}
+.test-app div.option.item:nth-child(4) {
+  background-color: #b9e6ae;
+}
+.test-app div.option.item:nth-child(5) {
+  background-color: #fde6bd;
+  margin-bottom:8%;
+}

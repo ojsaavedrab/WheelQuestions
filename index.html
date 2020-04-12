@@ -4,7 +4,8 @@
 <head>
 	<title>Wheel of Questions</title>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="css/wheel.css" />
+	<link rel="stylesheet" type="text/css" href="css/form.css" />
 	<script src="js/jquery-3.4.1.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/Wheel.js"></script>
@@ -17,8 +18,8 @@
 		<div class="score">
 			<img src="img/score.png" />
 			<label>
-				<svg viewBox="0 0 200 100">
-					<text x="0" y="70">1500</text>
+				<svg viewBox="0 0 140 90">
+					<text x="0" y="65">1500</text>
 				</svg>
 			</label>
 		</div>
@@ -38,15 +39,16 @@
 			</div>
 		</div>
 	</div>
-	<dialog id="Test1" class="test-app" data-file="js/testCities.json">
+	<dialog id="Test1" class="test-app" data-file="js/testEnglish.json">
 		<div class="test title">
 			<span data-text="test.title"></span>
 		</div>
 		<div class="question">
+			<div class="puntaje">For {{question.value}} points</div>
 			<span data-text="question.question"></span>
 		</div>
 		<div class="options">
-			<div class="template option hidden" id="option.id">
+			<div class="template option" >
 				<div class="id" data-text="option.id"></div>
 				<div class="option" data-text="option.option"></div>
 			</div>

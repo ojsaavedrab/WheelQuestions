@@ -1,77 +1,161 @@
 {
-    "title": "Capitales del mundo",
-    "questions": [
-      {
-        "id": 0,
-        "question": "¿Cuál es la capital de Italia?",
-        "options": [
-          {
-            "id": "A",
-            "option": "Roma"
-          },
-          {
-            "id": "B",
-            "option": "Milán"
-          },
-          {
-            "id": "C",
-            "option": "Florencia"
-          },
-          {
-            "id": "D",
-            "option": "Nápoles"
-          }
-        ],
-        "value": 100,
-        "idAnswer": "A"
-      },
-      {
-        "id": 1,
-        "question": "¿Cuál es la capital de Australia?",
-        "options": [
-          {
-            "id": "A",
-            "option": "Sidney"
-          },
-          {
-            "id": "B",
-            "option": "Melbourne"
-          },
-          {
-            "id": "C",
-            "option": "Camberra"
-          },
-          {
-            "id": "D",
-            "option": "Adelaide"
-          }
-        ],
-        "value": 500,
-        "idAnswer": "C"
-      },
-      {
-        "id": 2,
-        "question": "¿Cuál es la capital de Bolivia?",
-        "options": [
-          {
-            "id": "A",
-            "option": "Tarija"
-          },
-          {
-            "id": "B",
-            "option": "Oruro"
-          },
-          {
-            "id": "C",
-            "option": "Potosí"
-          },
-          {
-            "id": "D",
-            "option": "Sucre"
-          }
-        ],
-        "value": 200,
-        "idAnswer": "D"
-      }
-    ]
-  }
+  "title": "Teju's Shadow",
+  "questions": [
+    {
+      "id": 0,
+      "question": "How do you describe a shadow?",
+      "options": [
+        {
+          "id": "A",
+          "option": "like a dark picture"
+        },
+        {
+          "id": "B",
+          "option": "like a spy"
+        },
+        {
+          "id": "C",
+          "option": "like a monster"
+        }
+      ],
+      "value": 100,
+      "idAnswer": "B"
+    },
+    {
+      "id": 1,
+      "question": "¿What is the child in the story afraid?",
+      "options": [
+        {
+          "id": "A",
+          "option": "of the Night"
+        },
+        {
+          "id": "B",
+          "option": "of a Shadow"
+        },
+        {
+          "id": "C",
+          "option": "of the Puppets"
+        },
+        {
+          "id": "D",
+          "option": "of his Mother"
+        }
+      ],
+      "value": 500,
+      "idAnswer": "A"
+    },
+    {
+      "id": 2,
+      "question": "What is the way for a shadow to disappear?",
+      "options": [
+        {
+          "id": "A",
+          "option": "Taking a shower"
+        },
+        {
+          "id": "B",
+          "option": "Running"
+        },
+        {
+          "id": "C",
+          "option": "Turning off the light"
+        }
+      ],
+      "value": 200,
+      "idAnswer": "C"
+    },
+    {
+      "id": 3,
+      "question": "Who dances and jumps with Tejus?",
+      "options": [
+        {
+          "id": "A",
+          "option": "his Mother"
+        },
+        {
+          "id": "B",
+          "option": "Oruro"
+        },
+        {
+          "id": "C",
+          "option": "his Shadow"
+        }
+      ],
+      "value": 100,
+      "idAnswer": "C"
+    },
+    {
+      "id": 4,
+      "question": "¿Cuál es la capital de Bolivia?",
+      "options": [
+        {
+          "id": "A",
+          "option": "Tarija"
+        },
+        {
+          "id": "B",
+          "option": "Oruro"
+        },
+        {
+          "id": "C",
+          "option": "Potosí"
+        },
+        {
+          "id": "D",
+          "option": "Sucre"
+        }
+      ],
+      "value": 200,
+      "idAnswer": "D"
+    },
+    {
+      "id": 5,
+      "question": "¿Cuál es la capital de Bolivia?",
+      "options": [
+        {
+          "id": "A",
+          "option": "Tarija"
+        },
+        {
+          "id": "B",
+          "option": "Oruro"
+        },
+        {
+          "id": "C",
+          "option": "Potosí"
+        },
+        {
+          "id": "D",
+          "option": "Sucre"
+        }
+      ],
+      "value": 200,
+      "idAnswer": "D"
+    },
+    {
+      "id": 6,
+      "question": "¿Cuál es la capital de Bolivia?",
+      "options": [
+        {
+          "id": "A",
+          "option": "Tarija"
+        },
+        {
+          "id": "B",
+          "option": "Oruro"
+        },
+        {
+          "id": "C",
+          "option": "Potosí"
+        },
+        {
+          "id": "D",
+          "option": "Sucre"
+        }
+      ],
+      "value": 200,
+      "idAnswer": "D"
+    }
+  ]
+}

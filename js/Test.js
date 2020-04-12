@@ -24,7 +24,7 @@ function Test(_selector) {
         request.responseType = 'json';
         request.send();
         request.onload = function () {
-            test.data = request.response;
+            $.extend(test, request.response);
         }
     }
 
@@ -33,14 +33,36 @@ function Test(_selector) {
         getData();
     }
 
+    this.getQuestion = function (id) {
+        var list = $.grep(test.questions, function (item, index) {
+            return item.id == id;
+        });
+        if (list.length > 0) {
+            test.currentQuestion = list[0];
+            return test.currentQuestion;
+        }
+        else {
+            return null;
+        }
+    }
+
+    this.sendChoice = function (id) {
+        var response = { "isCorrect": false, "value": 0 }
+        if (test.currentQuestion.idAnswer == id) {
+            response.isCorrect = true;
+            response.value = test.currentQuestion.value;
+        }
+        return response;
+    }
+
     /** EVENTS METHODS **/
 
 
     init();
 }
 
-Wheel.prototype = {
-    constructor: Wheel,
+Test.prototype = {
+    constructor: Test,
 
     //Plublic: Funcion que se ejecuta cuando la obtencion es satisfactoria
     endRotate: function (position) {

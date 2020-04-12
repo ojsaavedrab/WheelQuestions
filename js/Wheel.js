@@ -10,7 +10,7 @@ function Wheel(_selector,_sectors,_speed){
 	var sectors = _sectors;
 	var speed = _speed;
 	var sectorDegree = 360/sectors;
-	var minTurns = 10,  maxTurns=30;
+	var minTurns = 4,  maxTurns=6;
 	var degrees, addSectors, score;
 	var whellApp = $(selector);
 	var whellImg = whellApp.find(".wheel>img");
@@ -54,7 +54,7 @@ function Wheel(_selector,_sectors,_speed){
 	this.rotate = function () {
 		setDegrees();
 		// Start rotate image
-		whellImg.css("transition", 'all 10s ease-out');
+		whellImg.css("transition", 'all 1s ease-out');
 		whellImg.css("transform", `rotate(${degrees}deg)`);
 	}
 
