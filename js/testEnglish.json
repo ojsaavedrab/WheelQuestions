@@ -128,6 +128,22 @@
         ],
         "value": 100,
         "idAnswer": "A"
+      },
+      {
+        "id": 7,
+        "question": "Cual es el apellido de Jorge",
+        "options": [
+          {
+            "id": "A",
+            "option": "Rico"
+          },
+          {
+            "id": "C",
+            "option": "Castillo"
+          }
+        ],
+        "value": 100,
+        "idAnswer": "A"
       }
     ]
   }
